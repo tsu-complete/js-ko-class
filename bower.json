@@ -1,0 +1,26 @@
+{
+  "name": "ko-class",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tsu-complete/js-ko-class",
+  "authors": [
+    "tsukumo"
+  ],
+  "description": "class binding provider for knockout",
+  "main": "index.coffee",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "class",
+    "binding",
+    "provider",
+    "knockout"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/*",
+    "!index.coffee"
+  ]
+}

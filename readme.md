@@ -63,7 +63,11 @@ ko.ClassBindingProvider.use options
 ### Options
 
 ```coffee
-bindings: {  } # {Object} default bindings (see Bindings)
+bindings:  { }          # {Object} default bindings (see Bindings)
+attribute: "data-class" # {String} default attribute name
+virtual:   "class"      # {String} default virtual attribute name
+fallback:  true         # {Boolean} if data-bind should be allowed
+router: null            # {Function(classname,bindings)} returns binding
 ```
 
 ### Bindings
@@ -106,36 +110,14 @@ or access from `ko.bindingProvider.instance`
 > register new bindings
 
 ```coffee
-provider.register(newBindings);
+provider.register(newBindings)
 ```
 
-#### Attribute
+#### Bindings
 
-> access or modify the attribute name used for binding
+> access all bindings
 
 ```coffee
-provider.attribute() #= "data-class"
-
-provider.attribute("my-data-class")
-```
-
-```jade
-div(my-data-class="astext")
-```
-
-#### Virtual
-
-> access or modify the attribute name used for virtual binding
-
-```coffee
-provider.virtual() #= "class"
-
-provider.virtual("my-class")
-```
-
-```jade
-// ko my-class: "list.items"
-div(my-data-class="astext")
-// /ko
+provider.bindings() #= extend _bindings, newBindings
 ```
 

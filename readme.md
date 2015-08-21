@@ -67,7 +67,7 @@ bindings:  { }          # {Object} default bindings (see Bindings)
 attribute: "data-class" # {String} default attribute name
 virtual:   "class"      # {String} default virtual attribute name
 fallback:  true         # {Boolean} if data-bind should be allowed
-router: null            # {Function(classname,bindings)} returns binding
+router:    null         # {Function(classname,bindings)} returns binding
 ```
 
 ### Bindings

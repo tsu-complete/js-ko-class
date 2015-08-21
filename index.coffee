@@ -61,6 +61,13 @@
         ko.cleanNode dummy
 
     ##
+    # convenience wrapper for setting binding provider in ko
+    # @param {Object} options what to pass the constructor
+    # @return {Object} constructed binding provider
+    @use: ( options ) ->
+      ko.bindingProvider.instance = new ko.ClassBindingProvider options
+
+    ##
     # setup provider settings
     # @param {Object} [options={}] fine tune controls
     # @param {Object} [options.bindings={}] default bindings

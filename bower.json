@@ -22,5 +22,8 @@
   "ignore": [
     "**/*",
     "!index.coffee"
-  ]
+  ],
+  "dependencies": {
+    "knockout": "~3.3.0"
+  }
 }

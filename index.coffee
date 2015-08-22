@@ -154,7 +154,8 @@
             accessor = @_router classname, @_bindings
             if accessor
               binding = if accessor instanceof Function
-              then accessor.call context.$data, context, classes else accessor
+              then accessor.call context.$data, context, classes, bindings
+              else accessor
               if accessors
                 binding = _object_map binding, _make_value_accessor
               ko.utils.extend result, binding

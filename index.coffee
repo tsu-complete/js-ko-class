@@ -95,9 +95,6 @@
 
         return bindings
 
-      @getBindings = @getBindingsFunction false
-      @getBindingAccessors = @getBindingsFunction true
-
     ##
     # register new bindings
     # @param {Object} bindings what to register
@@ -161,4 +158,18 @@
               ko.utils.extend result, binding
 
         return result
+
+    ##
+    # access bindings for a given node
+    # @param {Element} node what to get bindings for
+    # @param {Object} context what context the node has
+    # @return {Object} specified bindings
+    getBindings: @::getBindingsFunction false
+
+    ##
+    # access binding accessors for a given node
+    # @param {Element} node what to get accessors for
+    # @param {Object} context what context the node has
+    # @return {Object} specified bindings
+    getBindingAccessors: @::getBindingsFunction true
 
